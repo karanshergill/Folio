@@ -1,59 +1,54 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react'
+import styled from 'styled-components'
 
-const Section = styled.section.attrs({
-    className: 'flex flex-col items-center text-zinc-900'
+const FlexWrapper = styled.div.attrs({
+    className: "flex justify-center items-center"
 })``;
 
-const SectionWrapper = styled.div.attrs({
-    className: 'flex flex-row gap-x-14 w-4/5'
+const GridContainer = styled.div.attrs({
+    className: "grid grid-cols-[1fr_1px_1fr] max-w-4xl"
 })``;
 
-const HeadingConatiner = styled.div.attrs({
-    className: 'flex w-4/5 mb-10'
+const ItemLeft = styled.div.attrs({
+    className: 'justify-self-end place-self-center mr-10 mt-5 mb-5'
 })``;
 
-const Heading = styled.h2.attrs({
-    className: 'text-3xl text-zinc-600'
+const ItemRight = styled.div.attrs({
+    className: 'justify-self-start place-self-center ml-10 mt-5 mb-5'
 })``;
 
-const TimelineLeft = styled.div.attrs({
-    className: 'flex flex-col w-1/2'
+const Bar = styled.div.attrs({
+    className: 'flex justify-center items-center bg-yellow-500'
 })``;
 
-const TimelineRight = styled.div.attrs({
-    className: 'flex flex-col w-1/2'
+const Bullet = styled.div.attrs({
+    className: 'bg-gray-500 rounded-full h-4 w-4 absolute'
 })``;
 
-const Line = styled.div.attrs({
-    className: 'border-l border-zinc-400 h-64'
+const Description = styled.small.attrs({
+    className: 'text-gray-500'
 })``;
 
-export const Timeline = () => {
+export const Timeline = ({ events }) => {
     return (
-        <Section>
-            <HeadingConatiner>
-                <Heading>Education & Work</Heading>
-            </HeadingConatiner>
-            <SectionWrapper>
-                <TimelineLeft>
-                    <p>Sam Higginbottom University</p>
-                    <p>Bachelor of Computer Science</p>
-                    <p>Cube Technologies</p>
-                    <p>Penetration Tester</p>
-                    <p>Freelancer</p>
-                    <p>Web Developer and Ethical Hacker</p>
-                </TimelineLeft>
-                <Line></Line>
-                <TimelineRight>
-                    <p>2016-2019</p>
-                    <p>Studying Computer Science at Tokyo University opens up a world of unparalleled opportunities for academic and personal growth.</p>
-                    <p>2019-2020</p>
-                    <p>Embarking on the role of a Junior UI Designer through an internship is an exciting step in my professional journey.</p>
-                    <p>2020-2021</p>
-                    <p>I am enthusiastic about working on real-world projects, gaining exposure to industry-standard tools, and receiving constructive feedback to refine and elevate my design capabilities.</p>
-                </TimelineRight>
-            </SectionWrapper>
-        </Section>
+        <>
+            {events.map((event, index) => (
+                <FlexWrapper>
+                    <GridContainer key={ index }>
+                        <ItemLeft>
+                            <h1>{ event.heading }</h1>
+                            <small>{ event.date }</small>
+                        </ItemLeft>
+                        <Bar>
+                            <Bullet></Bullet>
+                        </Bar>
+                        <ItemRight>
+                            <h1>{ event.milestone.heading }</h1>
+                            <Description>{ event.milestone.description }</Description>
+                        </ItemRight>
+                    </GridContainer>
+                </FlexWrapper>
+            ))}
+        </>
     )
-};
+}

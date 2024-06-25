@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import '../index.css';
 
 const HeroSection = styled.section.attrs({
-  className: 'flex flex-col items-center py-16'
+  className: 'flex flex-col items-center py-12'
 })``;
 
 const HeroProfile = styled.div.attrs({

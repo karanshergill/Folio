@@ -1,18 +1,20 @@
-import React from 'react'
+import React from 'react';
 import { Navigation } from './components/Navigation';
 import { Hero } from './components/Hero';
 import { Services } from './components/Services';
-import { Timeline } from './components/TimeLine';
+import { Tech } from './components/Tech';
+import { Timeline } from './components/Timeline';
+import eventsData from './data/eventsData';
 import './App.css'
 import './index.css'
 
 function App() {
   return (
     <>
-      <Navigation />
-      <Hero />
-      <Services />
-      <Timeline />
+      {/* <Navigation /> */}
+      {/* <Hero /> */}
+      <Tech/>
+      {/* <Timeline events={eventsData} /> */}
     </>
   )
 }

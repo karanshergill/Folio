@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import '../index.css';
 
 const MainHeader = styled.header.attrs({
-  className: 'flex justify-between px-8 py-4'
+  className: 'flex justify-between px-8 mt-4'
 })``;
 
 const EmailLink = styled.div.attrs({
@@ -37,7 +37,6 @@ export const Navigation = () => {
                     <NavItem><NavLink to="/about">About</NavLink></NavItem>
                     <NavItem><NavLink to="/services">Services</NavLink></NavItem>
                     <NavItem><NavLink to="/portfolio">Portfolio</NavLink></NavItem>
-                    <NavItem><NavLink to="/blog">Blog</NavLink></NavItem>
                     <NavItem><NavLink to="/contact">Contact</NavLink></NavItem>
                 </NavList>
             </nav>
