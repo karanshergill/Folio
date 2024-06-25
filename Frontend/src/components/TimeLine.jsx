@@ -1,12 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 
+const Heading = styled.h1.attrs({
+    className: 'text-3xl text-center text-zinc-700 pb-10'
+})``;
+
 const FlexWrapper = styled.div.attrs({
     className: "flex justify-center items-center"
 })``;
 
 const GridContainer = styled.div.attrs({
-    className: "grid grid-cols-[1fr_1px_1fr] max-w-4xl"
+    className: "grid grid-cols-[1fr_1px_1fr] max-w-6xl"
 })``;
 
 const ItemLeft = styled.div.attrs({
@@ -22,16 +26,20 @@ const Bar = styled.div.attrs({
 })``;
 
 const Bullet = styled.div.attrs({
-    className: 'bg-gray-500 rounded-full h-4 w-4 absolute'
+    className: 'bg-zinc-600 rounded-full h-4 w-4 absolute'
 })``;
 
 const Description = styled.small.attrs({
-    className: 'text-gray-500'
+    className: 'text-zinc-700'
 })``;
 
 export const Timeline = ({ events }) => {
     return (
         <>
+            <section>
+                <Heading>
+                    Education & Work
+                </Heading>
             {events.map((event, index) => (
                 <FlexWrapper>
                     <GridContainer key={ index }>
@@ -49,6 +57,7 @@ export const Timeline = ({ events }) => {
                     </GridContainer>
                 </FlexWrapper>
             ))}
+            </section>   
         </>
     )
 }

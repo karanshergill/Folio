@@ -11,10 +11,11 @@ import './index.css'
 function App() {
   return (
     <>
-      {/* <Navigation /> */}
-      {/* <Hero /> */}
+      <Navigation />
+      <Hero />
+      <Timeline events={eventsData} />
+      <Services />
       <Tech/>
-      {/* <Timeline events={eventsData} /> */}
     </>
   )
 }

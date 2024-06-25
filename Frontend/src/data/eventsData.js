@@ -7,8 +7,16 @@ const eventsData = [
             description: "Studying Computer Science opens up a world of unparalleled opportunities for academic and personal growth."
         },
     },
+        {
+        heading: "Certified Ethical Hacker (CEH)",
+        date: "2021",
+        milestone: {
+            heading: "Bachelor of Computer Science",
+            description: "Studying Computer Science opens up a world of unparalleled opportunities for academic and personal growth."
+        },
+    },
     {
-        heading: "Cube Technologies",
+        heading: "Cube Technologies Limited",
         date: "2019-2021",
         milestone: {
             heading: "Penetration Tester",
@@ -16,7 +24,7 @@ const eventsData = [
         },
     },
     {
-        heading: "Freelancer",
+        heading: "Freelance Web Developer and Ethical Hacker",
         date: "2021-Present",
         milestone: {
             heading: "Web Developer and Ethical Hacker",

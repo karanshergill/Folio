@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 import '../index.css';
+import { Socials } from './Socials';
 
 const HeroSection = styled.section.attrs({
   className: 'flex flex-col items-center py-12'
@@ -15,19 +16,23 @@ const HeroDescription = styled.div.attrs({
 })``;
 
 const HeroButtons = styled.div.attrs({
-  className: 'flex gap-4 justify-center items-center'
+  className: 'flex gap-4 justify-center items-center pb-10'
 })``;
 
 const HireMeButton = styled.button.attrs({
-  className: 'py-2 px-4 bg-zinc-700 text-white rounded-full'
+  className: 'py-2 px-4 bg-zinc-800 text-white rounded-full'
 })``;
 
-const StyledH1 = styled.h1.attrs({
-  className: 'text-xl pt-6 pb-4'
+const Heading = styled.h1.attrs({
+  className: 'text-xl pt-6 pb-4 text-zinc-900'
 })``;
 
-const StyledH2 = styled.h2.attrs({
-  className: 'text-4xl py-2'
+const SubHeading = styled.h2.attrs({
+  className: 'text-4xl py-2 text-zinc-700'
+})``;
+
+const Description = styled.p.attrs({
+  className: 'text-zinc-700'
 })``;
 
 export const Hero = () => {
@@ -35,10 +40,10 @@ export const Hero = () => {
     <HeroSection>
       <HeroProfile>
         <img src="profile_image.png" alt="Profile Image" width="150" height="150" />
-        <StyledH1>Hi! I'm Karan Shergill 👋</StyledH1>
-        <StyledH2>Software Developer and Secuirty Researcher</StyledH2>
+        <Heading>Hi! I'm Karan Shergill 👋</Heading>
+        <SubHeading>Software Developer and Secuirty Researcher</SubHeading>
         <HeroDescription>
-          <p>A Full-Stack Web Developer and an Ethical Hacker. As a developer I speicalize in MERN stack, Network and Web Security.</p>
+          <Description>A Full-Stack Web Developer and an Ethical Hacker. As a developer I speicalize in MERN stack, Network and Web Security.</Description>
         </HeroDescription>
       </HeroProfile>
       <HeroButtons>
@@ -46,6 +51,7 @@ export const Hero = () => {
         <button>Download CV</button>
         <i className="bi bi-download"></i>
       </HeroButtons>
+      <Socials />
     </HeroSection>
   )
 }
