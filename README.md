@@ -1,3 +1,3 @@
 # Personal Portfolio
 
-![Demo](image.png)
+![Demo](demo.png)
