@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const ServicesSection = styled.section.attrs({
+const Section = styled.section.attrs({
     className: 'flex flex-col justify-center items-center mt-10 mb-20'
 })``;
 
@@ -44,7 +44,7 @@ const SubHeading = styled.p.attrs({
 export const Services = () => {
     return (
         <>
-            <ServicesSection>
+            <Section>
 
                 <Heading>Services</Heading>
                 <SubHeading>
@@ -95,7 +95,7 @@ export const Services = () => {
                     </ServiceCard>
 
                 </ServicesWrapper>
-            </ServicesSection>
+            </Section>
 
         </>
     )
