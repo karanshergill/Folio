@@ -18,12 +18,9 @@ const NavItem = styled.li.attrs({
     className: 'py-1 px-2 font-normal hover:font-medium hover:ease-in-out duration-300 hover:ring-1 hover:ring-zinc-600 hover:rounded-full'
 })``;
 
-export const Navigation = () => {
+export const Navigation = ({refs}) => {
 
-    const aboutRef = useRef(null);
-    const servicesRef = useRef(null);
-    const portfolioRef = useRef(null);
-    const contactRef = useRef(null);
+    const { timelineRef, servicesRef, portfolioRef, contactRef } = refs;
 
     const scrollToSection = (ref) => {
         ref.current.scrollIntoView({ behavior: 'smooth', block: 'start'});
@@ -38,10 +35,10 @@ export const Navigation = () => {
 
             <nav>
                 <NavList>
-                    <NavItem onClick={() => scrollToSection(aboutRef)}>About</NavItem>
+                    <NavItem onClick={() => scrollToSection(timelineRef)}>About</NavItem>
                     <NavItem onClick={() => scrollToSection(servicesRef)}>Services</NavItem>
                     <NavItem onClick={() => scrollToSection(portfolioRef)}>Portfolio</NavItem>
-                    <NavItem onClick={() => scrollToSection(contactRef)}>Contact</NavItem>
+                    {/* <NavItem onClick={() => scrollToSection(contactRef)}>Contact</NavItem> */}
                 </NavList>
             </nav>
         </MainHeader>
