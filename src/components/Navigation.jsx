@@ -1,9 +1,9 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import '../index.css';
 
 const MainHeader = styled.header.attrs({
-  className: 'flex justify-between px-8 mt-4'
+  className: 'flex justify-between px-10 mt-4'
 })``;
 
 const EmailLink = styled.div.attrs({
@@ -20,7 +20,7 @@ const NavItem = styled.li.attrs({
 
 export const Navigation = ({refs}) => {
 
-    const { timelineRef, servicesRef, portfolioRef, contactRef } = refs;
+    const { timelineRef, servicesRef, portfolioRef, footerRef } = refs;
 
     const scrollToSection = (ref) => {
         ref.current.scrollIntoView({ behavior: 'smooth', block: 'start'});
@@ -38,7 +38,7 @@ export const Navigation = ({refs}) => {
                     <NavItem onClick={() => scrollToSection(timelineRef)}>About</NavItem>
                     <NavItem onClick={() => scrollToSection(servicesRef)}>Services</NavItem>
                     <NavItem onClick={() => scrollToSection(portfolioRef)}>Portfolio</NavItem>
-                    {/* <NavItem onClick={() => scrollToSection(contactRef)}>Contact</NavItem> */}
+                    <NavItem onClick={() => scrollToSection(footerRef)}>Contact</NavItem>
                 </NavList>
             </nav>
         </MainHeader>
