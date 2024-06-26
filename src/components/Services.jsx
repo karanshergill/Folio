@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Section = styled.section.attrs({
-    className: 'flex flex-col justify-center items-center mt-10 mb-20'
+    className: 'flex flex-col justify-center items-center pt-20 mb-10'
 })``;
 
 const ServicesWrapper = styled.div.attrs({

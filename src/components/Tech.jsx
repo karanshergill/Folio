@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const FlexWrapper = styled.section.attrs({
-    className: 'flex flex-col items-center'
+    className: 'flex flex-col items-center mt-10 pb-10'
 })``;
 const SectionHeading = styled.h2.attrs({
     className: 'text-3xl text-zinc-600 mb-10'

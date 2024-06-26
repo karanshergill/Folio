@@ -10,11 +10,11 @@ const FlexWrapper = styled.div.attrs({
 })``;
 
 const GridContainer = styled.div.attrs({
-    className: "grid grid-cols-[1fr_1px_1fr] max-w-6xl"
+    className: "grid grid-cols-[1fr_1px_1fr] max-w-5xl"
 })``;
 
 const ItemLeft = styled.div.attrs({
-    className: 'justify-self-end place-self-center mr-10 mt-5 mb-5'
+    className: 'justify-self-start place-self-center mr-10 mt-5 mb-5'
 })``;
 
 const ItemRight = styled.div.attrs({
@@ -35,29 +35,27 @@ const Description = styled.small.attrs({
 
 export const Timeline = ({ events }) => {
     return (
-        <>
-            <section>
+            <section className='mt-10'>
                 <Heading>
                     Education & Work
                 </Heading>
-            {events.map((event, index) => (
-                <FlexWrapper>
-                    <GridContainer key={ index }>
-                        <ItemLeft>
-                            <h1>{ event.heading }</h1>
-                            <small>{ event.date }</small>
-                        </ItemLeft>
-                        <Bar>
-                            <Bullet></Bullet>
-                        </Bar>
-                        <ItemRight>
-                            <h1>{ event.milestone.heading }</h1>
-                            <Description>{ event.milestone.description }</Description>
-                        </ItemRight>
-                    </GridContainer>
-                </FlexWrapper>
-            ))}
-            </section>   
-        </>
+                {events.map((event, index) => (
+                    <FlexWrapper>
+                        <GridContainer key={index}>
+                            <ItemLeft>
+                                <h1>{event.heading}</h1>
+                                <small>{event.date}</small>
+                            </ItemLeft>
+                            <Bar>
+                                <Bullet></Bullet>
+                            </Bar>
+                            <ItemRight>
+                                <h1>{event.milestone.heading}</h1>
+                                <Description>{event.milestone.description}</Description>
+                            </ItemRight>
+                        </GridContainer>
+                    </FlexWrapper>
+                ))}
+            </section>
     )
 }
